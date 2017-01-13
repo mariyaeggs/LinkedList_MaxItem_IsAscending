@@ -16,51 +16,59 @@ using namespace std;
  * the number of substrings that start with A
  * and end with B.
  *
- * @author Mariya Eggensperger
+ * @author Mariya Eggensperger, Dr. Feiling Jia
 */
 int main() {
-      // Test the class constructor
-      LinkedList intList;
-      cout << "Constructing intList\n";
 
-      // Test insert()
-      intList.insert(100, 0);
-      intList.display(cout);
-      cout << endl;
+   ElementType max_node;
+   bool isAscendingOrder;
 
-      intList.insert(200, 0);
-      intList.display(cout);
-      cout << endl;
+   // Test the class constructor
+   LinkedList intList;
 
-      intList.insert(300, 1);
-      intList.display(cout);
-      cout << endl;
+   cout << "\n\nConstructing intList" << endl << endl;
 
-      intList.insert(400, 1);
-      intList.display(cout);
-      cout << endl;
+   cout << "******************* TEST maxItem *******************" << endl << endl;
+   cout << endl;
 
-      intList.insert(500, 3);
-      intList.display(cout);
-      cout << endl;
+   // Empty list
+   max_node = intList.maxItem();
+   cout << "-------------------- Empty List --------------------";
+   cout << "\n\nMax Item in an empty list: " << max_node << endl << endl;
 
-      // Test destructor
-      {
-         LinkedList anotherList;
-         for (int i = 0; i < 10; i++)
-         {
-            anotherList.insert(100*i, i);
-         }
-         cout << "\nThis is another list\n";
-         anotherList.display(cout);
-      }
+   // List with one element
+   cout << endl << endl;
+   cout << "-------------------- One in List ------------------";
+   intList.insert(1, 0);
+   cout << "\n\nYour list: ";
+   intList.display(cout);
+   max_node = intList.maxItem();
+   cout << "\n\nMax Item with one in list: " << max_node << endl << endl;
 
-      // Test erase
-      intList.erase(1);
-      intList.erase(1);
-      cout << "\n\nTwo items are erased from the first list\n";
-      intList.display(cout);
-      cout << endl;
+   // List with two elements
+   cout << endl << endl;
+   cout << "-------------------- Two in List ------------------";
+   intList.insert(2, 1);
+   cout << "\n\nYour list: ";
+   intList.display(cout);
+   max_node = intList.maxItem();
+   cout << "\n\nMax Item with two in list: " << max_node << endl << endl;
+
+   // List with many elements
+   cout << endl << endl;
+   cout << "-------------------- Many in List ------------------";
+   intList.insert(3, 2);
+   intList.insert(4, 3);
+   cout << "\n\nYour list: ";
+   intList.display(cout);
+   max_node = intList.maxItem();
+   cout << "\n\nMax Item with one in list: " << max_node << endl << endl;
+
+   cout << "******************* maxItem END *******************" << endl << endl;
+
+
+
+
 
 
 }

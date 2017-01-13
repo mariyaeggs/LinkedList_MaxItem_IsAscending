@@ -15,7 +15,7 @@ using namespace std;
  * the number of substrings that start with A
  * and end with B.
  *
- * @author Mariya Eggensperger
+ * @author Mariya Eggensperger, Dr. Feiling Jia
 */
 //-- Default constructor
 LinkedList::LinkedList()
@@ -115,9 +115,6 @@ void LinkedList::erase(int index)
       delete ptr;
    }
 }
-
-
-
 //-- Definition of display()
 void LinkedList::display(ostream & out) const
 {
@@ -127,4 +124,23 @@ void LinkedList::display(ostream & out) const
       out << ptr->data << " ";
       ptr = ptr->next;
    }
+}
+ElementType LinkedList::maxItem()
+{
+   Node * ptr = first;
+   ElementType max_node;
+
+   if (mySize == 0 || first == 0)
+   {
+      cerr << "Error. Empty list." << endl;
+      return -1; // Display an error message on the screen and return -1 as a max value.
+   }
+   max_node = ptr->data;
+   while(ptr != 0)
+   {
+      if(ptr->data > max_node)
+         max_node = ptr->data;
+      ptr = ptr->next;
+   }
+   return max_node;
 }

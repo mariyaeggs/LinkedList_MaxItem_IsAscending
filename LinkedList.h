@@ -16,7 +16,7 @@ using namespace std;
  * the number of substrings that start with A
  * and end with B.
  *
- * @author Mariya Eggensperger
+ * @author Mariya Eggensperger, Dr. Feiling Jia
 */
 typedef int ElementType;
 
@@ -35,6 +35,8 @@ public:
     Precondition: ostream out is open
     Postcondition: Elements of this LinkedList have been output to out.
     --------------------------------------------------------------------*/
+
+    ElementType maxItem();
 
 private:
     class Node
