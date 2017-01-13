@@ -28,6 +28,7 @@ public:
     LinkedList(const LinkedList & original); //copy constructor
     void insert(ElementType item, int pos);
     void erase(ElementType item);
+    void clear();
 
     void display(ostream & out) const;
     /*--------------------------------------------------------------------
@@ -37,6 +38,14 @@ public:
     --------------------------------------------------------------------*/
 
     ElementType maxItem();
+    /*--------------------------------------------------------------------
+    Display the contensts of this LinkedList.
+    Precondition: ostream out is open
+    Postcondition: Elements of this LinkedList have been output to out.
+    --------------------------------------------------------------------*/
+
+
+    bool isAscendingOrder();
 
 private:
     class Node
@@ -55,7 +64,8 @@ private:
                 : data(dataValue), next(NULL)
         { }
     };
-    Node * first;
+    Node * first; // Head ptr
+    Node * tail; // End ptr
     int mySize;
 };
 #endif //LAB1_EGGENSPERGERMARIYA_LINKEDLIST_H

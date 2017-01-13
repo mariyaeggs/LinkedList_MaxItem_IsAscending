@@ -66,9 +66,90 @@ int main() {
 
    cout << "******************* maxItem END *******************" << endl << endl;
 
+   // Clear all linked lists for Ascending tests
+   intList.clear();
+   cout << "Linked list is cleared: ";
+   intList.display(cout);
+   cout << endl;
 
+   cout << endl << endl;
+   cout << "************** TEST isAscendingOrder **************" << endl << endl;
+   cout << endl;
 
+   // Empty list
+   isAscendingOrder = intList.isAscendingOrder();
+   cout << "-------------------- Empty List --------------------";
 
+   cout << "\n\nAscending order in an empty list: ";
+   intList.display(cout);
+   cout << endl;
+   cout << "Is ascending in order: " << ((isAscendingOrder) ? "TRUE." : "FALSE.") << endl << endl;
+   cout << endl;
 
+   // One in List
+   intList.insert(1,0);
+   isAscendingOrder = intList.isAscendingOrder();
+   cout << "-------------------- One in List --------------------";
+
+   cout << "\n\nAscending order in an empty list: ";
+   intList.display(cout);
+   cout << endl;
+   cout << "Is ascending in order: " << ((isAscendingOrder) ? "TRUE." : "FALSE.") << endl << endl;
+   cout << endl;
+
+   // Two in List
+   intList.insert(2,0);
+   isAscendingOrder = intList.isAscendingOrder();
+   cout << "-------------------- Two in List --------------------";
+
+   cout << "\n\nAscending order in an empty list: ";
+   intList.display(cout);
+   cout << endl;
+   cout << "Is ascending in order: " << ((isAscendingOrder) ? "TRUE." : "FALSE.") << endl << endl;
+   cout << endl;
+
+   // Three in List
+   intList.insert(3,0);
+   isAscendingOrder = intList.isAscendingOrder();
+   cout << "-------------------- Three in List --------------------";
+
+   cout << "\n\nAscending order in an empty list: ";
+   intList.display(cout);
+   cout << endl;
+   cout << "Is ascending in order: " << ((isAscendingOrder) ? "TRUE." : "FALSE.") << endl << endl;
+   cout << endl;
+
+   // Four in List
+   intList.insert(4,0);
+   isAscendingOrder = intList.isAscendingOrder();
+   cout << "-------------------- Four in List --------------------";
+
+   cout << "\n\nAscending order in an empty list: ";
+   intList.display(cout);
+   cout << endl;
+   cout << "Is ascending in order: " << ((isAscendingOrder) ? "TRUE." : "FALSE.") << endl << endl;
+   cout << endl;
+
+   // Five in List
+   intList.insert(5,0);
+   isAscendingOrder = intList.isAscendingOrder();
+   cout << "-------------------- Five in List --------------------";
+
+   cout << "\n\nAscending order in an empty list: ";
+   intList.display(cout);
+   cout << endl;
+   cout << "Is ascending in order: " << ((isAscendingOrder) ? "TRUE." : "FALSE.") << endl << endl;
+   cout << endl;
+
+   // Six in List
+   intList.insert(6,0);
+   isAscendingOrder = intList.isAscendingOrder();
+   cout << "-------------------- Six in List --------------------";
+
+   cout << "\n\nAscending order in an empty list: ";
+   intList.display(cout);
+   cout << endl;
+   cout << "Is ascending in order: " << ((isAscendingOrder) ? "TRUE." : "FALSE.") << endl << endl;
+   cout << endl;
 
 }

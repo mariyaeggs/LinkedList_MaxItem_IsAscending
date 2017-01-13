@@ -44,8 +44,6 @@ LinkedList::LinkedList(const LinkedList & origList)
       lastPtr = lastPtr->next;
    }
 }
-
-
 //-- Definition of the destructor
 LinkedList::~LinkedList()
 {
@@ -59,8 +57,6 @@ LinkedList::~LinkedList()
       prev = ptr;
    }
 }
-
-
 //-- Definition of insert()
 void LinkedList::insert(ElementType dataVal, int index)
 {
@@ -86,8 +82,6 @@ void LinkedList::insert(ElementType dataVal, int index)
       predPtr->next = newPtr;
    }
 }
-
-
 //-- Definition of erase()
 void LinkedList::erase(int index)
 {
@@ -125,6 +119,23 @@ void LinkedList::display(ostream & out) const
       ptr = ptr->next;
    }
 }
+// Definition of clear()
+void LinkedList::clear()
+{
+   Node *pDel = first;
+
+   //Traverse the list and delete the node one by one from the head
+   while (pDel != NULL) {
+      // Delete head out
+      first = first->next;
+      delete pDel;
+      // Update head
+      pDel = first;
+   }
+   // Point tail to NULL
+   tail = first = NULL;
+}
+// Definition for maxItem()
 ElementType LinkedList::maxItem()
 {
    Node * ptr = first;
@@ -144,3 +155,20 @@ ElementType LinkedList::maxItem()
    }
    return max_node;
 }
+// Definition for isAscendingOrder
+bool LinkedList::isAscendingOrder() {
+   if (mySize == 0 || first == 0) {
+      return true;
+   }
+   Node *ptr = first;
+   ElementType order = ptr->data;
+   while(ptr != 0) {
+      if(ptr->data < order) {
+         return false;
+      }
+      order = ptr->data;
+      ptr = ptr->next;
+   }
+   return true;
+}
+
