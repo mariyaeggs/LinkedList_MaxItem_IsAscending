@@ -39,13 +39,18 @@ public:
 
     ElementType maxItem();
     /*--------------------------------------------------------------------
-    Display the contensts of this LinkedList.
-    Precondition: ostream out is open
-    Postcondition: Elements of this LinkedList have been output to out.
+    Determine the maximum value among the elements in the list.
+    Precondition: In an empty list, the return is -1
+    Postcondition: The maximum value is displayed from the list.
     --------------------------------------------------------------------*/
 
-
     bool isAscendingOrder();
+    /*--------------------------------------------------------------------
+    Check if all elements in the list are in the ascending order or not.
+    Precondition: Function returns true if list is emtpy or has one item.
+    Postcondition: If ascending, return true. If not ascending, false.
+    --------------------------------------------------------------------*/
+
 
 private:
     class Node
